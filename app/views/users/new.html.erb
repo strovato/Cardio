@@ -1,4 +1,6 @@
-<header><h1>User</h1><header>
+<header><h1>Create New User</h1><header>
+	
+	
 
 <%= form_for(@user) do |form| %>
 <div>
@@ -7,3 +9,5 @@
 	<%= form.submit "Sign up" %>
 	</div>
 <%end%>
+
+<% link_to "Sign in", sign_in_path %>

@@ -8,8 +8,14 @@ class SessionsController < ApplicationController
     if user.try(:authenticate, params[:session][:password])
       cookies.signed[:user_id] = user.id
       redirect_to decks_path
+    else
+      redirect_to sign_in_path
     end
-    # redirect_to 
+
+  def destroy
+    cookies.delete :user_id
+    redirect_to sign_in_path
+  end
     
   end
 end

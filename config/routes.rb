@@ -1,5 +1,5 @@
 Cardio::Application.routes.draw do
-  root to: "decks#index"
+  root to: "users#new"
   resources :decks do 
     resources :cards, only: [:new, :create, :edit, :update, :show, :destroy]
   end
@@ -7,7 +7,7 @@ Cardio::Application.routes.draw do
   resources :users, only: [:new, :create]
   get "sign_in" => "sessions#new"
   post "sign_in" => "sessions#create"
-  
+  delete "sign_in" => "sessions#destroy"
   
   
   #get "/decks" => "decks#index"
