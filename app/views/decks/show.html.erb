@@ -1,0 +1,11 @@
+<header><h1><%= @deck.name %><span style="font-size:14px;"> <%= link_to "Edit", edit_deck_path(@deck) %> </span></h1></header>
+
+<%= link_to "Create new card", new_deck_card_path(@deck) %>
+<br><br><br>
+
+<%= render @cards %>
+	
+
+<br>
+	
+	<%= link_to "Back", decks_path %>

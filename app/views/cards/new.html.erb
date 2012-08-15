@@ -1,0 +1,10 @@
+<header><h1>New Card for <%= @deck.name %></h1></header>
+
+	<%= form_for([@deck, @card]) do |form| %>
+		<%= render form %>
+		<%= form.submit "Create card" %>
+	<%end%>
+
+
+
+<%= link_to "Back", @deck %>

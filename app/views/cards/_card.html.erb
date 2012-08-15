@@ -1,0 +1,6 @@
+<div>
+	<%= link_to  card.front, [card.deck, card] %>
+	-
+	<%= link_to "Edit", edit_deck_card_path(card.deck, card) %>
+	<%= link_to "Delete", [card.deck, card], method: :delete, confirm: "Are you sure?" %>
+  </div>

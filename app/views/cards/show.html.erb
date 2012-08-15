@@ -1,0 +1,8 @@
+<header><h1><%= @deck.name %></h1></header>
+<%=@card.front%>
+<br>
+<%=@card.back%>
+<br><br>
+<%= link_to "Edit", edit_deck_card_path(@deck, @card) %>
+<br><br>
+<%= link_to "Back", @deck %>

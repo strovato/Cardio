@@ -1,0 +1,7 @@
+<header><h1>Edit <%= @deck.name %></h1></header>
+
+<%= form_for(@deck) do |form| %>
+	<%= form.text_field :name, placeholder: "Deck name" %>
+	<%= form.submit "Update deck" %>
+<% end %>
+<%= link_to "Back", decks_path %>

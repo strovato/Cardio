@@ -1,0 +1,7 @@
+<header><h1>Sign In</h1><header>
+	<br>
+<%= form_for(:session) do |form| %>
+	<%= form.text_field :name, placeholder: "Name" %>
+	<%= form.password_field :password, placeholder: "Password" %>
+	<%= form.submit "Sign in" %>
+<%end%>

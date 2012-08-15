@@ -1,0 +1,34 @@
+<header>
+	<h1>Cardio</h1>
+</header>
+
+<%= link_to "New deck", new_deck_path %>
+<br><br>
+
+<% @decks.each do |deck| %>
+  <div>
+	<%= link_to  deck.name, deck %>
+	-
+	<%= link_to "Edit", edit_deck_path(deck) %>
+	<%= link_to "Delete", deck, method: :delete, confirm: "Are you sure?" %>
+  </div>
+	
+  
+<% end %>
+
+
+
+<!-- <h1>All cards </h1>
+<br><br>
+
+<% @decks.each do |deck| %>
+	<h2><%= link_to deck.name, deck %></h2>
+	<br>
+	-
+	<%= deck.cards.each do |card|%>
+		<%= link_to  card.front, deck_card_path(deck, card)%>
+		<br>
+	<%end%>
+<%end%>
+	 -->
+		
