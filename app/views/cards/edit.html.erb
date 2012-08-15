@@ -1,6 +1,6 @@
 <header><h1>Edit Card for <%= @deck.name%><br> </h1></header>
 
-	<%= @card.front %><br><br><%= @card.back %>
+	
 	<%= form_for([@deck, @card]) do |form| %>
 		<%= render form%>
 		<%= form.submit "Update card" %>
