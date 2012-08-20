@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
+  skip_before_filter :require_login, :only => [:new, :create]
+  
   def new
- 
   end
   
   def create
@@ -11,11 +12,11 @@ class SessionsController < ApplicationController
     else
       redirect_to sign_in_path
     end
+  end
 
   def destroy
     cookies.delete :user_id
     redirect_to sign_in_path
   end
     
-  end
 end

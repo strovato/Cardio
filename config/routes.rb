@@ -5,9 +5,10 @@ Cardio::Application.routes.draw do
   end
   
   resources :users, only: [:new, :create]
+  get "sign_up" => "users#new"
   get "sign_in" => "sessions#new"
   post "sign_in" => "sessions#create"
-  delete "sign_in" => "sessions#destroy"
+  delete "sign_out" => "sessions#destroy"
   
   
   #get "/decks" => "decks#index"
